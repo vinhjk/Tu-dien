@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="el">
+<input type="button" value="Search" onclick="Search();" id="search">
+<p id="result"></p>
+<script>
+    let El = new Array("Lion", "Tiger", "Man", "Woman");
+    let Vn = new Array("Sư tử", "Hổ", "Đàn ông", "Phụ nữ");
+
+    function Search() {
+        let value = document.getElementById('el').value;
+        for (let i = 0; i < El.length; i++) {
+            if (value === El[i]) {
+                alert(El[i] + " : " + Vn[i]);
+                return Vn[i];
+            }
+        }
+        alert('Not found !');
+        return false;
+    }
+
+</script>
+</body>
+</html>
